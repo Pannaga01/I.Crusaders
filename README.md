@@ -13,7 +13,7 @@ User Stories -
 
 
 Use case diagram -
-https://drive.google.com/file/d/1IYgwudrakJ6zDV_gOKLbbBdBfnhqDRKp/view?usp=sharing
+https://drive.google.com/file/d/10mAvY9T8tsB-LJ6syoLav0lv_9nezT9i/view?usp=sharing
 
 ER diagram -
 https://drive.google.com/file/d/1UuPBNY1lzLFCAKNV7WFUK20Ij8449Qpq/view?usp=sharing
