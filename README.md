@@ -15,6 +15,8 @@ User Stories -
 Use case diagram -
 https://drive.google.com/file/d/1IYgwudrakJ6zDV_gOKLbbBdBfnhqDRKp/view?usp=sharing
 
+ER diagram -
+https://drive.google.com/file/d/1UuPBNY1lzLFCAKNV7WFUK20Ij8449Qpq/view?usp=sharing
 
 Meeting minutes: 
   - Saturday, 9:02am - 17:52mins
