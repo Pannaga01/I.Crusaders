@@ -8,7 +8,6 @@ User Stories -
   - User should be able to decrypt a message using the corresponding decryption method or some other method 
   - There should be algorithms which make use of “keys” for user authentication purpose
   - User should be able to see example of decryption for an existing text as sample
-  - User should be able to see the algo for the method, so that he can work it out and verify his answer.
   - User should be able to see the algorithms at work i.e the step-by-step procedure/solution  of the algorithm while encryption/decryption taking place.
 
 
