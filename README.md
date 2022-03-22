@@ -17,6 +17,9 @@ https://drive.google.com/file/d/10mAvY9T8tsB-LJ6syoLav0lv_9nezT9i/view?usp=shari
 ER diagram -
 https://drive.google.com/file/d/1UuPBNY1lzLFCAKNV7WFUK20Ij8449Qpq/view?usp=sharing
 
+Calss Diagram- 
+https://drive.google.com/file/d/1yUTu4TF3hknGAUrV97XL3F2CBo6rgwe7/view?usp=sharing
+
 Meeting minutes: 
   - Saturday, 9:02am - 17:52mins
   - Sunday, 9:10pm - 25mins
