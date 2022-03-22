@@ -19,6 +19,7 @@ https://drive.google.com/file/d/1UuPBNY1lzLFCAKNV7WFUK20Ij8449Qpq/view?usp=shari
 
 Calss Diagram- 
 https://drive.google.com/file/d/1yUTu4TF3hknGAUrV97XL3F2CBo6rgwe7/view?usp=sharing
+https://drive.google.com/file/d/1VtTwBLVGGjpWb3HwMKmfKPbEOEnINbOx/view?usp=sharing
 
 Meeting minutes: 
   - Saturday, 9:02am - 17:52mins
