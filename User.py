@@ -21,6 +21,24 @@ class User:
             else:
                 obj = shift_cipher(self.key,None,self.text)
                 obj.decrypt()
+                
+        if self.algo == "hillcypher":
+            
+            if option == "encrypt":
+                obj = hillcypher(self.key,self.text,None)
+                obj.encrypt()
+            else:
+                obj = hillcypher(self.key,None,self.text)
+                obj.decrypt()
+
+        if self.algo == "caesarcipher":
+            
+            if option == "encrypt":
+                obj = caesarcipher(self.key,self.text,None)
+                obj.encrypt()
+            else:
+                obj = caesarcipher(self.key,None,self.text)
+                obj.decrypt()
 
         obj.dsiplay()
         obj.save()
