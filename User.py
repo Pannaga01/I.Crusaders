@@ -1,3 +1,6 @@
+from UI.py import giveText
+
+
 class User:
 
     def__init__(self,option,algo,text,key,path):
@@ -7,7 +10,7 @@ class User:
         self.text = text
         self.key = key
         self.path = path
-88
+
     def encrypt_or_decrypt(self):
         
         if self.algo == "shift_cipher":
@@ -30,4 +33,8 @@ class User:
 
 
 
-text = getText()
+frame = tk.Tk()
+frame.title("TextBox Input")
+frame.geometry('500x400')
+
+text = giveText()

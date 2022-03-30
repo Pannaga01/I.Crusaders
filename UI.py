@@ -92,9 +92,6 @@ def giveText():
 
     
 
-frame = tk.Tk()
-frame.title("TextBox Input")
-frame.geometry('500x400')
 
 def text_input():
     lblChoice = tk.Label(frame, text = "how do you want to encrypt: ").grid(row=0,column=0) 
