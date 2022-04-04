@@ -2,7 +2,8 @@
 from tkinter import *
 from tkinter import ttk
 import tkinter as tk
-
+#from Encryption_Algorithms import *
+from User import *
 
 def chooseFile():
     lblChooseFile = tk.Label(frame, text = "choose a file: ")
@@ -11,6 +12,7 @@ def chooseFile():
     n = tk.StringVar()
     fileChosen = ttk.Combobox(frame, width = 27, textvariable = n)
   
+
 # Adding combobox drop down list
     fileChosen['values'] = (' January', 
                           ' February',
@@ -56,15 +58,15 @@ def clickButton(frame):
     printButton = tk.Button(frame,text = "Print",command=printInput(frame.inputtxt))
 '''
 
-def printInput(inputtxt):
-        lbl = tk.Label(frame, text = "")
-        lbl.grid(row=4)
-        inp = inputtxt.get(1.0)
-        lbl.config(text = "Provided Input: "+inp)
-        return inp 
 
 
 def giveText():
+
+    def printInput():
+        inp = inputtxt.get(1.0, "end-1c")
+        lbl.config(text = "Provided Input: "+inp)
+        #obj = module.user()
+        user.text = inp
 
 
     lbl1 = tk.Label(frame, text = "enter you text here: ")
@@ -79,19 +81,16 @@ def giveText():
     # from textbox and printing it 
     # at label widge
 
+    # Label Creation
+    lbl = tk.Label(frame, text = "")
+    lbl.grid(row=5)
     # Button Creation
     printButton = tk.Button(frame,
                             text = "Print", 
-                            command = printInput(inputtxt))
+                            command = printInput)
     printButton.grid(row=4)
     
-    # Label Creation
-    
-
-    
-
-    
-
+    #return printButton
 
 def text_input():
     lblChoice = tk.Label(frame, text = "how do you want to encrypt: ").grid(row=0,column=0) 
@@ -105,7 +104,16 @@ def text_input():
     R1.grid(row=0,column=1)
     R2.grid(row=1,column=1)
 
+frame = tk.Tk()
+frame.title("TextBox Input")
+frame.geometry('500x400')
+
+user = User()
+#user.text = "xdwedfwedw"
+text_input()
+print(user.text)
 
 
 frame.mainloop()
+
 

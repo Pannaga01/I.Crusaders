@@ -1,21 +1,24 @@
-from UI.py import giveText
+#from UI import *
+#from Encryption_Algorithms import *
 
 
 class User:
 
-    def__init__(self,option,algo,text,key,path):
-        
-        self.option = option
-        self.algo = algo
-        self.text = text
-        self.key = key
-        self.path = path
+    def __init__(self):
+        self.option = None
+        self.algo = None
+        self.text = None
+        self.key = None
+        self.path = None
 
+    def get_text(self):
+        print(self.text) 
+    '''
     def encrypt_or_decrypt(self):
         
         if self.algo == "shift_cipher":
             
-            if option == "encrypt":
+            if self.option == "encrypt":
                 obj = shift_cipher(self.key,self.text,None)
                 obj.encrypt()
             else:
@@ -24,7 +27,7 @@ class User:
                 
         if self.algo == "hillcypher":
             
-            if option == "encrypt":
+            if self.option == "encrypt":
                 obj = hillcypher(self.key,self.text,None)
                 obj.encrypt()
             else:
@@ -33,14 +36,14 @@ class User:
 
         if self.algo == "caesarcipher":
             
-            if option == "encrypt":
+            if self.option == "encrypt":
                 obj = caesarcipher(self.key,self.text,None)
                 obj.encrypt()
             else:
                 obj = caesarcipher(self.key,None,self.text)
                 obj.decrypt()
 
-        obj.dsiplay()
+        obj.display()
         obj.save()
 
     def view_file(self):
@@ -48,11 +51,10 @@ class User:
         if self.option == 'view':
             view_obj = View(path)
             view_obj.getTheFile()
+'''
 
 
 
-frame = tk.Tk()
-frame.title("TextBox Input")
-frame.geometry('500x400')
 
-text = giveText()
+
+

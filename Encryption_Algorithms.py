@@ -1,6 +1,6 @@
 class Algorithms:
 
-    def__init__(self):
+    def __init__(self):
         self.key = key
         self.plain_text = plain_text
         self.cipher_text = cipher_text
@@ -31,7 +31,6 @@ class shift_cipher(Algorithms):
 class hillcypher(Algorithms):
     
     def encryption(self):
-  
         k = 0
         for i in range(3):
             for j in range(3):
