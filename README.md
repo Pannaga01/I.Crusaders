@@ -21,7 +21,4 @@ Class Diagram-
 https://drive.google.com/file/d/1yUTu4TF3hknGAUrV97XL3F2CBo6rgwe7/view?usp=sharing
 https://drive.google.com/file/d/1VtTwBLVGGjpWb3HwMKmfKPbEOEnINbOx/view?usp=sharing
 
-Meeting minutes: 
-  - Saturday, 9:02am - 17:52mins : discussion on topic
-  - Sunday, 9:10pm - 25mins : use caser diagram and user stories
-  - Sunday, 20th March 2022, 15min 9:00-9:15: class diagram
+
