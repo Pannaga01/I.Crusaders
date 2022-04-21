@@ -120,7 +120,7 @@ def e_d_Window(window, e_or_d):
     container = Frame(window, borderwidth = 1, relief = 'sunken', height = window_height/1.1, width = window_width/1.5)
     container.grid(column = 2, row = 1, rowspan = 9, pady = 20)
     container.grid_propagate(False)
-    rawText = Text(container)
+    rawText = Text(container,wrap = WORD,width = 45)
     rawText.grid()
 
     # Encrypt/Decrypt button at the bottom
