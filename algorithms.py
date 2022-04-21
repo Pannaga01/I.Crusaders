@@ -1,10 +1,16 @@
+#Importing all the necessary libraries
 from abc import abstractmethod
-#from egcd import egcd
 from ast import Constant
-class Algorithms:
 
-    e_f = 0
-    d_f = 0
+'''For our software we need one class which is used to define all the algorithms
+   The Algorithms class has 3 functions present in it.
+   __init__ - Similar to constructors includes key, plaintext and ciphertext
+   encryption - Function which consists of all the operations needed to encrypt the text in the file
+   decryption - Function which consists of all the operations needed to decrypt the text in the file
+   
+'''
+
+class Algorithms:
 
     def __init__(self, key):
         self.key = key
@@ -20,9 +26,10 @@ class Algorithms:
         pass
     
   
-
+#The child class RailFence inherith attributes from the main class and implements its encryption and decryption function
 class RailFence(Algorithms):
 
+    #Function to do the encryption process
     def encryption(self):
         text = self.plain_text
         key = self.key
@@ -60,6 +67,7 @@ class RailFence(Algorithms):
         hc_desc = "1.In the rail fence cipher, the plain-text is written downwards and diagonally on successive rails of an imaginary fence. \n 2.When we reach the bottom rail, we traverse upwards moving diagonally, after reaching the top rail, the direction is changed again. Thus the alphabets of the message are written in a zig-zag manner. \n 3.After each alphabet has been written, the individual rows are combined to obtain the cipher-text.\n\n"
         self.cipher_text = hc_desc + "" . join(result)
 
+    #Function to do the decryption process
     def decryption(self):
         text = self.cipher_text
         key = self.key
@@ -119,11 +127,14 @@ class RailFence(Algorithms):
         self.plain_text = hcDec + "".join(result)
         
        
+#The child class ShiftCipher inherith attributes from the main class and implements its encryption and decryption function
 class ShiftCipher(Algorithms):
     
+    #Function to do the encryption process
     def encryption(self):
         result = ''
         for i in range(len(self.plain_text)):
+            #Takes in each individual character from the text and with the help of the key given as input and bases on the case of the alphabet, it is encrypted
             char = self.plain_text[i]
             if (char.isupper()):
                 result += chr((ord(char) + self.key-65) % 26 + 65)
@@ -133,12 +144,14 @@ class ShiftCipher(Algorithms):
         self.cipher_text = Shiftalgo_enc + result
 
 
+    #Function to do the decryption process
     def decryption(self):
         message = self.cipher_text #encrypted message
         LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
         for key in range(len(LETTERS)):
             translated = ''
+            #Takes in each individual character from the text and checkes whether it is an alphabet and then decryptis it with the help of the key given in as the input
             for symbol in message:
                 if symbol in LETTERS:
                     num = LETTERS.find(symbol)
@@ -152,8 +165,15 @@ class ShiftCipher(Algorithms):
         self.plain_text = Shiftalgo_dec + translated
         
 
+#The child class ShiftCipher inherith attributes from the main class and implements its encryption and decryption function
 class VigenereCipher(Algorithms):
 
+    
+    ''' This function generates the
+        key in a cyclic manner until
+        it's length isn't equal to
+        the length of original text
+    '''
     def generateKey(string, key):
         key = list(key)
         if len(string) == len(key):
@@ -164,6 +184,10 @@ class VigenereCipher(Algorithms):
                 key.append(key[i % len(key)])
         return("" . join(key))
 
+    '''This function returns the
+       encrypted text generated
+       with the help of the key
+    '''
     def encryption(self):
 
         key = VigenereCipher.generateKey(self.plain_text,self.key)
@@ -179,6 +203,10 @@ class VigenereCipher(Algorithms):
         self.cipher_text = "Ei = (Pi + Ki) mod 26 \n \n "  + cipher_text
 
 
+    '''This function decrypts the
+       encrypted text and returns
+       the original text
+    '''
     def decryption(self):
 
         key = VigenereCipher.generateKey(self.cipher_text,self.key)
@@ -191,5 +219,3 @@ class VigenereCipher(Algorithms):
             orig_text.append(chr(x))
         plain_text = "" . join(orig_text)
         self.plain_text = "Di = (Ei - Ki + 26) mod 26 \n \n" + plain_text
-
-    
