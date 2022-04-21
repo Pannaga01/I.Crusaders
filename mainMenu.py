@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as ttk
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import filedialog 
