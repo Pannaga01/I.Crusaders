@@ -1,3 +1,4 @@
+# Importing all the necessary libraries
 from tkinter import *
 import tkinter as tk
 from tkinter.ttk import *
@@ -5,7 +6,7 @@ from mainMenu import *
 
 master = Tk()
 
-# to center the window
+# Tkinter codes to create and to center the window
 screen_width = master.winfo_screenwidth()
 screen_height = master.winfo_screenheight()
 
@@ -28,11 +29,22 @@ master.columnconfigure(0, weight = 1)
 master.columnconfigure(1, weight = 1)  
 master.columnconfigure(2, weight = 1)
 
-#button_width = 25
+'''
+    Code to bind each of the button with its respective function. Here each button has its own corresponding actions.
+    The buttons include ENCRYPT, DECRYPT, VIEW and EXIT
+    ENCRYPT - Opens a window where the user can encrypt the contents present in a text file
+    DECRYPT - Opens a window where the user can decrypt the contents present in a text file
+    VIEW - Opens a window where the user can see all the contents present in a particular text file.
+    EXIT - Closes all the programs
+
+    All the operations of each of the function is defined and gets redirected to the mainmenu.py file
+'''
 e  = Button(master, text = 'ENCRYPT', command = lambda: openWindow(master, screen_width, screen_height, 'Encrypt'),)
 d  = Button(master, text = 'DECRYPT', command = lambda: openWindow(master, screen_width, screen_height, 'Decrypt'))
 v  = Button(master, text = 'VIEW', command = lambda: openWindow(master, screen_width, screen_height, 'view'))
-ex = Button(master, text = "Exit",command = master.destroy)
+ex = Button(master, text = "EXIT",command = master.destroy)
+
+# Additional codes for padding the buttons
 
 e.grid( column = 1, row = 1, sticky = 'nesw', pady = 10)
 d.grid( column = 1, row = 2, sticky = 'nesw', pady = 10)
@@ -40,4 +52,3 @@ v.grid( column = 1, row = 3, sticky = 'nesw', pady = 10)
 ex.grid(column = 1, row = 4, sticky = 'nesw', pady = 10)
 
 master.mainloop()
-
