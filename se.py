@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 from tkinter.ttk import *
 from mainMenu import *
 
@@ -16,7 +17,8 @@ yCoordinate = int(screen_height/2 - window_height/2)
 
 master.title('The App')
 master.geometry('{}x{}+{}+{}'.format(window_width, window_height, xCoordinate, yCoordinate))
-
+label = tk.Label(master, text = "Classical encryption tutorial", bd = 25, fg = "black", font = "Castellar")
+label.grid( column = 1, row = 0, sticky = 'nesw', pady = 10)
 master.rowconfigure(0, weight = 7)
 
 for i in range(1, 5):
