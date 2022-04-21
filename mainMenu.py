@@ -1,4 +1,4 @@
-import tkinter as ttk
+import tkinter as tk
 from tkinter import *
 from tkinter.ttk import *
 from tkinter import filedialog 
@@ -37,10 +37,6 @@ def save_file(text):
     try:
         fob.write(my_str1)
         fob.close()
-        t1.delete('1.0',END) # Delete from position 0 till end 
-        t1.update()  
-        b1.config(text="Saved")
-        b1.after(3000, lambda: b1.config(text='Save'))
     except :
         print (" There is an error...")
 
@@ -59,9 +55,9 @@ def openWindow(master, screen_width, screen_height, title):
 
 # this function basically deals with all the contents inside the encrypt/decrypt window.
 def view_window(window):
-    text = tk.Text(window, height=12)
+    text = tk.Text(window, height=12,wrap = WORD, width = 67)
     text.grid(column=0, row=0, sticky='nsew')
-    open_button = ttk.Button(window,text='Open a File',command= lambda: open_text_file(text))
+    open_button = tk.Button(window,text='Open a File',command= lambda: open_text_file(text))
     open_button.grid(column=0, row=1, sticky='w', padx=10, pady=10)
 
 def e_d_Window(window, e_or_d):
@@ -120,7 +116,7 @@ def e_d_Window(window, e_or_d):
     container = Frame(window, borderwidth = 1, relief = 'sunken', height = window_height/1.1, width = window_width/1.5)
     container.grid(column = 2, row = 1, rowspan = 9, pady = 20)
     container.grid_propagate(False)
-    rawText = Text(container,wrap = WORD,width = 45)
+    rawText = Text(container, wrap = WORD, width = 45)
     rawText.grid()
 
     # Encrypt/Decrypt button at the bottom
